@@ -1,11 +1,21 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
 Hello Allerseits
 
+    <h3 class="text-center mb-5">Nick has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>
+    {% for blog in blogs %}
 
-{% for blog in blogs %}
+    <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
 
-<a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
 
-<h1>{{ blog.text }}</h1>
-    {{ blog.published_date }}
 
-{% endfor %}
+
+
+    <h1>{{ blog.text }}</h1>
+        {{ blog.published_date|date:'M d Y'|upper }}
+    {% endfor %}
+
+
+{% endblock %}
