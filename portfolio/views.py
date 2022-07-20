@@ -6,3 +6,6 @@ def home(request):
     projects = Project.objects.all()
     return render(request, 'portfolio/home.html', {'projects':projects})
 
+def profile(request):
+    return render(request, 'portfolio/profile.html')
+
