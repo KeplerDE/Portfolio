@@ -111,40 +111,9 @@
 
 
 				<div class="social-links">
-					<img id="social_img" src="#">
-					<h3>Find me on Insta</h3>
-
-					<a target="_blank" href="https://www.instagram.com/morsko1kotik/">Hier</a>
-					<br>
-
 				</div>
 			</div>
 
-		</div>
-	</section>
-
-	<section class="s1">
-		<div class="main-container">
-			<h3 style="text-align: center;">Some of my past projects</h3>
-
-			<div class="post-wrapper">
-				{% for post in posts %}
-				<div>
-					<div class="post">
-						<img class="thumbnail" src="{{post.thumbnail.url}}">
-						<div class="post-preview">
-							<h6 class="post-title">{{post.headline}}</h6>
-							<p class="post-intro">{{post.sub_headline}}</p>
-							<a href="{%  url 'post' post.slug %}">Read More</a>
-						</div>
-					</div>
-				</div>
-				{% endfor %}
-			</div>
-
-			<p align="center">
-				<a href="#>View More</a>
-			</p>
 		</div>
 	</section>
 
@@ -175,7 +144,7 @@
 	</section>
 
 	<script type="text/javascript">
-		let static = "#"
+		let static = "{% static 'css' %}"
 	</script>
 
 	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
