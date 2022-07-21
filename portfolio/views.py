@@ -8,8 +8,6 @@ def home(request):
     return render(request, 'portfolio/home.html', {'projects': projects})
 
 def profile(request):
-    return render(request, 'portfolio/profile.html')
+    projects = Project.objects.all()
+    return render(request, 'portfolio/profile.html', {'projects': projects})
 
-def prodetail(request):
-    project = Project.objects.all()
-    return render(request, 'portfolio/prodetail.html', {'project'})

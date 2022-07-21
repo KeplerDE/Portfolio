@@ -124,13 +124,17 @@
 			<h3 style="text-align: center;">Some of my past projects</h3>
 
 			<div class="post-wrapper">
-				{% for project in projects %}
-
+				{% for projects in projects %}
+				<div>
 					<div class="post">
+						<img class="thumbnail" src="{{projects.image.url}}">
 						<div class="post-preview">
-							<a href="#">Read More</a>
+							<h6 class="post-title">{{ projects.title }}</h6>
+							<p class="post-intro">{{ project.description }}</p>
+
 						</div>
 					</div>
+				</div>
 				{% endfor %}
 			</div>
 
