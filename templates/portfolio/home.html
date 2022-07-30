@@ -4,17 +4,20 @@
 
 {% block content %}
 
-<div class="row justify-content-center my-3">
-  <div class="col-5">
-    <img src="{% static 'portfolio/foto.jpg' %}" class="img-fluid">
-  </div>
-</div>
 
-<div class="row justify-content-center mb-3">
-  <div class="col-md-9 text-center">
-    <h1 id="hometext" class="font-weight-bold">Denis Osipov is Backend Developer on Django 😊</h1>
-  </div>
-</div>
+<header class="masthead" style="background-image: url('{% static 'portfolio/post-sample-image.jpg' %}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>Denis Osipov is Backend Developer on Django 😊</h1>
+                    <span class="subheading">This is what I do.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
 
 <h2 class="mt-5"></h2>
 <hr>
